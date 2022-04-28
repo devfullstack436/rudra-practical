@@ -1,0 +1,297 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: Blender-Pro;
+  src: url('../src/fonts/Blender-Pro-Bold.otf');
+}
+.container{
+  height: 100%;
+   background-color: #ffcc00; 
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 2em;
+}
+.search-chart{
+  width: 24%; 
+}
+.formheader{
+  width: 100%;
+  border-radius: 0.5em;
+  display: flex;
+  justify-content: space-between;
+}
+.form-cover{
+  width: 25%;
+}
+.chart-cover{
+  width: 72.5%; 
+  padding: 0;
+}
+.formheader form{
+  padding: 2em;
+  background-color: #00f0ff;
+  position: relative;
+}
+.box-corner{
+  border-color: #ffcc00 transparent transparent;
+  border-style: solid;
+  border-width: 50px 50px 0 0;
+  height: 0;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 0;
+}
+.formheader h4{
+  font-size: 1.75em;
+  font-weight: bold;
+  color: #000;
+  line-height: 1.5em;
+  letter-spacing: 0.05em;
+  margin-bottom: 1em;
+  font-family: Blender-Pro;
+}
+.formheader input{
+  font-size: 1em;
+  font-family: Blender-Pro;
+  font-weight: 400;
+  color: #fff;
+  background-color: #001417;
+  border: 0.1em solid #02a1b6;
+  line-height: 1.5em;
+  letter-spacing: 0.05em;
+  padding: 0.3em 1em;
+  width: 100%;
+}
+.formheader input:focus{
+  background-color: #002a30;
+  border: 0.1em solid #fff;
+  border-radius: 0;
+}
+.form-content{
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+.formheader span{
+  margin-bottom: 0.5em;
+  display: block;
+}
+.formheader select{
+  font-size: 1em;
+  font-family: Blender-Pro;
+  font-weight: 400;
+  color: #fff;
+  background-color: #001417;
+  border: 0.1em solid #02a1b6;
+  line-height: 1.5em;
+  letter-spacing: 0.05em;
+  padding: 0.4em 1em;
+  width: 100%;
+}
+
+.submit-btn button, .submit-btn button::after {
+  width: 50%;
+  height: auto;
+  font-size: 1em;
+  background: linear-gradient(45deg, transparent 5%, #FF013C 5%);
+  border: 0;
+  color: #fff;
+  line-height: 1.5em;
+  letter-spacing: 0.05em;
+  box-shadow: 3px 3px 0px #00E6F6;
+  outline: transparent;
+  position: relative;
+  padding: 0.5em 2em;
+  margin-top: 1.5em;
+  font-family: Blender-Pro;
+}
+
+.submit-btn button::after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+  
+  content: 'AVAILABLE NOW';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #FF013C 5%);
+  text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+  clip-path: var(--slice-0);
+}
+
+.submit-btn button:hover::after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+
+
+.formheader label{
+  font-size: 1em;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 0.5em;
+  letter-spacing: 0.05em;
+  display: block;
+  font-family: Blender-Pro;
+}
+
+
+
+.chartrow{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.5em;
+  width: 100%;
+}
+.chart1, .chart2, .chart3, .chart4, .chart5, .chart6{
+  width: 46%;
+  height: auto;
+  padding: 1em;
+  border-radius: 1em;
+  color: #fff;
+  background-image: url('../src/chart-background-banner.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.chart1 h4, .chart2 h4, .chart3 h4, .chart4 h4, .chart5 h4, .chart6 h4{
+  font-size: 1.125em;
+  color: #00f0ff;
+  font-weight: 600;
+  padding: 0.5em 1em;
+  font-family: Blender-Pro;
+  letter-spacing: 0.05em;
+}
+
+.logo-part{
+  text-align: center;
+  margin-bottom: 2em;
+}
+.logo-part img{
+  width: 22em;
+}
+
+
+
+
+
+/* Responsive CSS */
+@media only screen and (max-width: 1250px)  {
+  .container{
+    padding: 2em 1em;
+  }
+  .logo-part img{
+    width: 15em;
+  }
+  .chartrow{
+    flex-direction: column;
+    margin: 0;
+  }
+  .chart1, .chart2, .chart3, .chart4, .chart5, .chart6{
+    width: 90%;
+    margin-bottom: 2em;
+  }
+  .submit-btn button{
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 999px)  {
+  .formheader{
+    display: block;
+  }
+  .form-cover{
+    width: 100%;
+    max-width: 50%;
+    margin: 0 auto;
+    margin-bottom: 2em;
+  }
+  .chart-cover{
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  .submit-btn button{
+    width: 40%;
+  }
+  .formheader h4{
+    font-size: 1.25em;
+  }
+}
+
+@media only screen and (max-width: 640px)  {
+  .form-cover{
+    width: 100%;
+    max-width: 70%;
+  }
+  .chart-cover{
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  .submit-btn button{
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 480px)  {
+  .form-cover{
+    width: 100%;
+    max-width: 90%;
+  }
+}
